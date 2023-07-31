@@ -1,0 +1,14 @@
+<div class="grid md:grid-cols-4 gap-14" *ngIf="newBooks.length; else shimmer" >
+      <div *ngFor="let book of newBooks">
+        <app-single-card [book]="book"></app-single-card>
+      </div>
+    </div>
+
+  
+  <ng-template #shimmer>
+      <div class="grid md:grid-cols-4 gap-14">
+          <div *ngFor="let dummy of dummyArray">
+            <app-shimmer-ui/>
+          </div>
+      </div>
+</ng-template>

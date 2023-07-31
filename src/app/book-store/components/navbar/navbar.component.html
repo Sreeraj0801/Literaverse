@@ -1,0 +1,11 @@
+<div class="bg-blue-300 h-14 w-full px-10 py-4 flex justify-between fixed top-0 z-50">
+    <div class="logo md:text-3xl font-bold text-slate-700 cursor-pointer">
+        {{logo}}
+    </div>
+    <div class="text-slate-700 flex justify-center items-center gap-5">
+        <app-nav-button text="cart" icon="🛒" path="/cart" [cartCount]="cartCount" >
+        </app-nav-button>
+        <app-nav-button text="Guest" icon="👲" path="">
+        </app-nav-button>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+
+    <div class="md:h-40 w-full  bg-blue-100 rounded flex gap-4 p-5 ">
+    <div class="relative md:block hidden  -top-6 -left-5">
+        <app-button text="❌" (btnEmitter)="removeFromCart(product?.isbn13)"></app-button>
+      </div>
+    <img class="md:h-full h-48 w-48 " src="{{product?.image}}" alt="productImage"/>
+    <div class="text-xl text-slate-600 font-bold grid w-full">
+        <p>{{product?.title}}</p>
+        <p class="text-sm font-light truncate">{{product?.subtitle}}</p>
+        <div class="md:flex justify-between">
+            <h1 class="md:text-2xl text-xl text-blue-500 ">{{product?.price}}</h1>
+            <div class="flex justify-center items-center h-fit">
+                <app-cart-button text="➖" (cartBtnClick)="updateQuantity(product?.isbn13,-1)"></app-cart-button>
+                <span class="h-10 w-10  flex justify-center items-center terixt-black">{{product?.quantity}}</span>
+                <app-cart-button text="➕" (cartBtnClick)="updateQuantity(product?.isbn13,+1)"></app-cart-button>
+            </div>
+            <div>
+                
+                Total: <span class="text-blue-800">{{product?.totalPrice| currency:'USD' }}</span>
+            </div>
+        </div>
+    </div>
+</div>

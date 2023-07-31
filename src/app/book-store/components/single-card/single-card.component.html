@@ -1,0 +1,12 @@
+<div class="bg-blue-100 p-3  cursor-pointer hover:scale-105 rounded-xl max-w-sm">
+    <div class="h-[65%] w-full flex justify-center items-center ">
+        <img src="{{book?.image}}" alt="book_image" class="md:h-64 ">
+    </div>
+    <div class=" md:w-full  max-w-sm truncate mb-5">
+        <p class="font-bold text-xl">{{book?.title}}</p>
+        <p class="text-lg h-10 truncate">{{book?.subtitle}}</p>
+        <h1 class="text-red-500 font-bold text-2xl ">{{book?.price}}</h1>        
+            <app-button  text="Add to cart" (btnEmitter)="addToCart(book)"></app-button>
+        </div>
+        <app-button  text="Remove from cart" color='bg-red-500' hover="hover:bg-red-600" (btnEmitter)="removeFromCart(book?.isbn13)"></app-button>
+</div>

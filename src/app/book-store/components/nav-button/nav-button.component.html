@@ -1,0 +1,4 @@
+<a routerLink="{{path}}" class="text-xl font-bold cursor-pointer hover:bg-blue-950 hover:text-white rounded-md flex">
+    <span class="hidden md:block">{{text}}</span> <span class="text-3xl">{{icon}}</span>
+    <span *ngIf="cartCount !== undefined" class="relative -top-1 -left-4 bg-green-500 p-2 rounded-full h-6 w-6 flex justify-center items-center" >{{ cartCount }}</span>
+</a>
